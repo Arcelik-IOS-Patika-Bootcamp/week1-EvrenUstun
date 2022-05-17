@@ -109,3 +109,18 @@ if let trackName = tracks.trackName{
 }else{
     print("Not found a track")
 }
+
+// guard let example.
+/// This function print the km of the track we want
+///
+///
+/// - Parameter trackName: The track name we want km.
+func giveTrackKm(_ trackName: String){
+    guard let trackIsPresent = tracks.kmOfTrack?[trackName] else{
+        return
+    }
+    print("\n\(trackName) length: \(trackIsPresent)")
+}
+
+giveTrackKm("Istanbul Park")
+giveTrackKm("Monaco")
