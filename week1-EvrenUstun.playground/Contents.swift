@@ -98,3 +98,14 @@ car1.pitStop(tyre: nil) // if we send nil, pitStop func set default value (hard)
 // Create F1 tracks.
 var tracks = FormulaOneTracks(["Circuit de Spa-Francorchamps", "Istanbul Park", "Monza"],
                               ["Circuit de Spa-Francorchamps": 6.979,"Istanbul Park": 5.338, "Monza": 5.793])
+
+// if let sample.
+if let trackName = tracks.trackName{
+    print("Tracks and Length:")
+    // Loop example.
+    for track in trackName{
+        print("\(track) -> \(tracks.kmOfTrack?[track] ?? 0) km")
+    }
+}else{
+    print("Not found a track")
+}
