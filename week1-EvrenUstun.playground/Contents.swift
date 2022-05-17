@@ -124,3 +124,25 @@ func giveTrackKm(_ trackName: String){
 
 giveTrackKm("Istanbul Park")
 giveTrackKm("Monaco")
+
+// Control Flow example
+// Created addSponsor func for team.
+/// This function adding sponsor for car.
+///
+///
+/// - Parameter car: The car to be sponsored.
+func addSponsor(car: FormulaOneCar){
+    if car.teamName == "Red Bull Racing" {
+        car.sponsorName.append("Bybit")
+        car.sponsorName.append("Oracle")
+    }else if car.teamName == "Ferrari Racing"{
+        car.sponsorName.append("Mission Winnow")
+        car.sponsorName.append("Ray-Ban")
+    }else {
+        print("No team found for sponsor.")
+    }
+}
+
+// Added sponsor for car2.
+addSponsor(car: car2)
+print("\ncar 2 sponsors:\n\(car2.sponsorName)")
