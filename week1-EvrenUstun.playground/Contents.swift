@@ -145,4 +145,24 @@ func addSponsor(car: FormulaOneCar){
 
 // Added sponsor for car2.
 addSponsor(car: car2)
-print("\ncar 2 sponsors:\n\(car2.sponsorName)")
+print("\ncar 2 sponsors:\n\(car2.sponsorName)\n")
+
+// switch case example
+/// This function finds the engine manufacturer of the desired car.
+///
+///
+/// - Parameter car: The car whose engine manufacturer we want to find
+func whichEngineManufacturer(_ car: FormulaOneCar){
+    switch car.teamName {
+    case "Red Bull Racing":
+        print(EngineManufacturers.Honda)
+    case "Ferrari Racing":
+        print(EngineManufacturers.Ferrari)
+    case "Mercedes Racing":
+        print(EngineManufacturers.Mercedes)
+    default:
+        print("No suitable engine found.")
+    }
+}
+
+whichEngineManufacturer(car1)
